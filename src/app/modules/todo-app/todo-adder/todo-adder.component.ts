@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { TodoInfo } from 'src/app/models/todo';
+
+import { Todo } from '../../../models/todo.model';
 
 import { TodoService } from '../../../services/todo.service';
 
@@ -23,6 +24,6 @@ export class TodoAdderComponent implements OnInit {
   ngOnInit(): void {}
 
   handleAddTodo(): void {
-    this.todoService.addTodo(this.form.value as TodoInfo);
+    this.todoService.addTodo(this.form.value as Todo);
   }
 }
