@@ -10,7 +10,7 @@ import { TodoService } from '../../../services/todo.service';
   styleUrls: ['./todo-adder.component.css'],
 })
 export class TodoAdderComponent implements OnInit {
-  addTodoForm = this.formBuilder.group({
+  form = this.formBuilder.group({
     title: '',
     description: '',
   });
@@ -23,6 +23,6 @@ export class TodoAdderComponent implements OnInit {
   ngOnInit(): void {}
 
   handleAddTodo(): void {
-    this.todoService.addTodo(this.addTodoForm.value as TodoInfo);
+    this.todoService.addTodo(this.form.value as TodoInfo);
   }
 }

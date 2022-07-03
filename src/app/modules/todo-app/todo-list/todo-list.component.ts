@@ -18,6 +18,5 @@ export class TodoListComponent implements OnInit {
 
   handleRemoveTodo(title: string): void {
     this.todoService.removeTodoByTitle(title);
-    this.todos = this.todoService.getTodos();
   }
 }
