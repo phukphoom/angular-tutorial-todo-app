@@ -1,0 +1,6 @@
+<div *ngFor="let todo of todos" style="margin-left: 1.5rem">
+  <app-todo-item
+    [todo]="todo"
+    (removeClicked)="handleRemoveTodo($event)"
+  ></app-todo-item>
+</div>
