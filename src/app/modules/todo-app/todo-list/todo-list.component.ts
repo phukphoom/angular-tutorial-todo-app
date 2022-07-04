@@ -16,7 +16,7 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  handleRemoveTodo(title: string): void {
-    this.todoService.removeTodoByTitle(title);
+  handleRemoveTodo(id: string): void {
+    this.todoService.removeTodoById(id);
   }
 }

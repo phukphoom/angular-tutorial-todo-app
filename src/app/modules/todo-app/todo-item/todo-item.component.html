@@ -1,4 +1,4 @@
 <h3>{{ todo.title }}</h3>
 <p *ngIf="todo.description">Description: {{ todo.description }}</p>
 
-<button (click)="removeClicked.emit(todo.title)">Remove</button>
+<button (click)="removeClicked.emit(todo.id)">Remove</button>

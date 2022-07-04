@@ -8,17 +8,21 @@ export class TodoService {
 
   constructor() {}
 
-  addTodo(todo: Todo) {
-    this.todos.push(todo);
+  addTodo(title: string, description?: string) {
+    this.todos.push({
+      id: new Date().getTime().toString(),
+      title,
+      description,
+    });
   }
 
   getTodos(): Todo[] {
     return this.todos;
   }
 
-  removeTodoByTitle(todoTitle: string) {
+  removeTodoById(id: string) {
     this.todos.splice(
-      this.todos.findIndex((todo) => todo.title === todoTitle),
+      this.todos.findIndex((todo) => todo.id === id),
       1
     );
   }
